@@ -1,0 +1,22 @@
+.a-wsp{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 2;
+    height: 3.5rem;
+    width: 3.5rem;
+    bottom: 8px;
+    right: 8px;
+    color: inherit;
+    background: #25d366;
+    border-style: none;
+    border-radius:100%;
+    box-shadow: 1px 6px 24px 0 rgba(7,94,84,.24);
+    cursor: pointer;
+    transition: #25d366 .2s linear;
+}
+.img-wsp{
+    height: 2rem;
+    width: 2rem;
+    margin:auto;
+}

@@ -34,9 +34,10 @@ body{
 nav{
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     border-top: solid 3px #25d366;
-    position: absolute !important;
+    position: fixed !important;
     width: 100%;
     color: white;
+    backdrop-filter: blur(8px);
 }
 
 .nav-item{
@@ -48,6 +49,7 @@ nav{
 .nav-link{
     position: relative;
     z-index: 100;
+    font-weight: bold;
 }
 
 .nav-item::after {

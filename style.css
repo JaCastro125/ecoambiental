@@ -26,6 +26,9 @@
 nav{
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     border-top: solid 3px #25d366;
+    position: absolute !important;
+    width: 100%;
+    color: white;
 }
 
 .nav-item{
@@ -56,4 +59,26 @@ nav{
 
 .nav-item:hover::after{
         transform: scale(1,1);
+}
+
+/* header */
+header{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+header > img{
+    width: 30%;
+    height: 90vh;
+    object-fit: cover;
+    object-position: center;
+    flex-grow: 0;
+    transition: all 1s;
+    transform: skewX(-7deg);
+    filter: grayscale(90%);
+    &:hover{
+        filter: grayscale(0);
+    }
+
 }

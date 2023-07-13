@@ -1,20 +1,28 @@
+body{
+    overflow-x: hidden;
+    background-color: #c6f3a56f;
+}
 /* boton flotante */
 .a-wsp{
     display: flex;
     flex-direction: row;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     height: 3.5rem;
     width: 3.5rem;
-    bottom: 8px;
-    right: 8px;
+    bottom: 10px;
+    right: 10px;
     color: inherit;
     background: #25d366;
-    border-style: none;
+    border-style:none;
     border-radius:100%;
-    box-shadow: 1px 6px 24px 0 rgba(7,94,84,.24);
+    box-shadow: 1px 2px 8px 0 rgba(14, 255, 42, 0.6);
     cursor: pointer;
     transition: #25d366 .2s linear;
+    filter: brightness(1);
+}
+.a-wsp:hover{
+    filter: brightness(1.5);
 }
 .img-wsp{
     height: 2rem;
@@ -58,7 +66,7 @@ nav{
 }
 
 .nav-item:hover::after{
-        transform: scale(1,1);
+    transform: scale(1,1);
 }
 
 /* header */

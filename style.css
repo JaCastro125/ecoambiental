@@ -74,22 +74,38 @@ nav{
 /* header */
 header{
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
+    transform: skewX(5deg);
+    width: 100%;
 }
 
-header > img{
-    width: 30%;
+.card-head{
+    position: relative;
     height: 90vh;
+    width: 25vw;
+    margin-left: 1rem;
+    transition: width 1s;
+    &:hover{
+        width: 35vw;
+    }
+}
+
+.img-head{
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    object-position: center;
-    flex-grow: 0;
-    transition: all 1s;
-    transform: skewX(-7deg);
     filter: grayscale(90%);
     &:hover{
         filter: grayscale(0);
     }
+}
+
+.title-head{
+    position: relative;
+    right:30%;
+    bottom: 50%;
+    background-color: #25d366;
+    transform: rotate(-90deg);
 }
 
 

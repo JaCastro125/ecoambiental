@@ -1,6 +1,5 @@
 body{
     overflow-x: hidden;
-    background-color: #c6f3a56f;
 }
 /* boton flotante */
 .a-wsp{
@@ -163,17 +162,10 @@ header{
     }
 }
 
-footer{
-    margin-bottom: 10%;
-}
-
-
 /* footer */
 footer{
     display: flex;
     color: white;
-    
-    
 }
 
 
@@ -187,10 +179,7 @@ footer{
 .servicios{
     text-align: center;
     background-color: #198754;
-    width: 30%;
-    
-    
-
+    width: 30%; 
 }
 
 

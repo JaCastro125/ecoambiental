@@ -166,6 +166,60 @@ header{
 footer{
     margin-bottom: 10%;
 }
+
+
+/* footer */
+footer{
+    display: flex;
+    color: white;
+    
+    
+}
+
+
+.container-footer-1{
+    
+    background-color: #198754;
+    text-align: center;
+    width: 50%;
+}
+
+.servicios{
+    text-align: center;
+    background-color: #198754;
+    width: 30%;
+    
+    
+
+}
+
+
+
+.container-footer-2  {
+    justify-items: center;
+    text-align: center;
+    background-color:gray;
+    width: 30%;
+}
+
+.footer-icons{
+    margin: 5px;
+}
+
+
+.container-footer-3{
+    display: flex;
+    background-color: black;
+    color:White;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.telefono{
+    margin-top: 40px;
+}
 /* redes contacto */
 
 #redes .redes-phone {

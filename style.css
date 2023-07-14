@@ -1,20 +1,28 @@
+body{
+    overflow-x: hidden;
+    background-color: #c6f3a56f;
+}
 /* boton flotante */
 .a-wsp{
     display: flex;
     flex-direction: row;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     height: 3.5rem;
     width: 3.5rem;
-    bottom: 8px;
-    right: 8px;
+    bottom: 10px;
+    right: 10px;
     color: inherit;
     background: #25d366;
-    border-style: none;
+    border-style:none;
     border-radius:100%;
-    box-shadow: 1px 6px 24px 0 rgba(7,94,84,.24);
+    box-shadow: 1px 2px 8px 0 rgba(14, 255, 42, 0.6);
     cursor: pointer;
     transition: #25d366 .2s linear;
+    filter: brightness(1);
+}
+.a-wsp:hover{
+    filter: brightness(1.5);
 }
 .img-wsp{
     height: 2rem;
@@ -22,6 +30,142 @@
     margin:auto;
 }
 
+/* NavBar */
+nav{
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    border-top: solid 3px #25d366;
+    position: fixed !important;
+    width: 100%;
+    color: white;
+    backdrop-filter: blur(8px);
+}
+
+.nav-item{
+    padding: 0.2rem;
+    margin: 0 0.2rem;
+    position: relative;
+}
+
+.nav-link{
+    position: relative;
+    z-index: 100;
+    font-weight: bold;
+}
+
+.nav-item::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top:0;
+    border-radius: 1rem;
+    transform: scale(1,0);
+    transition: transform 1s;
+    background-color: #25d366;
+    z-index: 99;
+}
+
+.nav-item:hover::after{
+    transform: scale(1,1);
+}
+
+/* header */
+header{
+    display: flex;
+    justify-content: center;
+    transform: skewX(5deg);
+    width: 100%;
+}
+
+.card-head{
+    position: relative;
+    height: 90vh;
+    width: 25vw;
+    margin-left: 1rem;
+    transition: width 1s;
+    &:hover{
+        width: 35vw;
+    }
+}
+
+.img-head{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(90%);
+    &:hover{
+        filter: grayscale(0);
+    }
+}
+
+.title-head{
+    position: relative;
+    right:30%;
+    bottom: 50%;
+    background-color: #25d366;
+    transform: rotate(-90deg);
+}
+
+
+/* CARROUSELL */
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+
+.slider {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 15vh;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+
+	&::before,
+	&::after {
+		background-color: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll 40s linear infinite;
+		display: flex;
+	}
+	
+	.slide {
+		height: 100px;
+		width: 250px;
+        align-items: center;
+        align-content: center;
+        object-position:center;
+	}
+    .slide>img{
+        object-fit: cover;
+    }
+}
+
+footer{
+    margin-bottom: 10%;
+}
 
 
 /* footer */

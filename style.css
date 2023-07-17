@@ -1,8 +1,9 @@
-body{
+body {
     overflow-x: hidden;
 }
+
 /* boton flotante */
-.a-wsp{
+.a-wsp {
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -13,24 +14,26 @@ body{
     right: 10px;
     color: inherit;
     background: #25d366;
-    border-style:none;
-    border-radius:100%;
+    border-style: none;
+    border-radius: 100%;
     box-shadow: 1px 2px 8px 0 rgba(14, 255, 42, 0.6);
     cursor: pointer;
     transition: #25d366 .2s linear;
     filter: brightness(1);
 }
-.a-wsp:hover{
+
+.a-wsp:hover {
     filter: brightness(1.5);
 }
-.img-wsp{
+
+.img-wsp {
     height: 2rem;
     width: 2rem;
-    margin:auto;
+    margin: auto;
 }
 
 /* NavBar */
-nav{
+nav {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     border-top: solid 3px #25d366;
     position: fixed !important;
@@ -39,13 +42,13 @@ nav{
     backdrop-filter: blur(8px);
 }
 
-.nav-item{
+.nav-item {
     padding: 0.2rem;
     margin: 0 0.2rem;
     position: relative;
 }
 
-.nav-link{
+.nav-link {
     position: relative;
     z-index: 100;
     font-weight: bold;
@@ -58,50 +61,52 @@ nav{
     height: 100%;
     width: 100%;
     left: 0;
-    top:0;
+    top: 0;
     border-radius: 1rem;
-    transform: scale(1,0);
+    transform: scale(1, 0);
     transition: transform 1s;
     background-color: #25d366;
     z-index: 99;
 }
 
-.nav-item:hover::after{
-    transform: scale(1,1);
+.nav-item:hover::after {
+    transform: scale(1, 1);
 }
 
 /* header */
-header{
+header {
     display: flex;
     justify-content: center;
     transform: skewX(5deg);
     width: 100%;
 }
 
-.card-head{
+.card-head {
     position: relative;
     height: 90vh;
     width: 25vw;
     margin-left: 1rem;
     transition: width 1s;
-    &:hover{
+
+    &:hover {
         width: 35vw;
     }
 }
 
-.img-head{
+.img-head {
     height: 100%;
     width: 100%;
     object-fit: cover;
     filter: grayscale(90%);
-    &:hover{
+
+    &:hover {
         filter: grayscale(0);
     }
 }
 
-.title-head{
+.title-head {
     position: relative;
-    right:30%;
+    right: 30%;
     bottom: 50%;
     background-color: #25d366;
     transform: rotate(-90deg);
@@ -111,45 +116,56 @@ header{
 /* CARROUSELL */
 
 @keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7))
+    }
 }
 
 .slider {
-	background: white;
-	/* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
-	margin: auto;
-	overflow:hidden;
-	position: relative;
+    background: white;
+    /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
+    margin: auto;
+    overflow: hidden;
+    position: relative;
     max-width: 90%;
-	&::before,
-	&::after {
-		background-color: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-		content: "";
-		position: absolute;
-		z-index: 2;
-	}
-	&::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	}
-	&::before {
-		left: 0;
-		top: 0;
-	}
-	.slide-track {
-		animation: scroll 300s linear infinite;
-		display: flex;
+
+    &::before,
+    &::after {
+        background-color: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        position: absolute;
+        z-index: 2;
+    }
+
+    &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+    }
+
+    .slide-track {
+        animation: scroll 300s linear infinite;
+        display: flex;
         margin: 0;
         padding: 0;
-	}
-	.slide {
+    }
+
+    .slide {
         margin: 0;
         padding: 0;
         max-width: 300px;
-	}
-    .slide>img{
+    }
+
+    .slide>img {
         object-fit: cover;
     }
 }
@@ -158,7 +174,8 @@ header{
 
 
 
-.container-footer-1{
+.container-footer-1 {
+
     background-color: #198754;
     width: 100%;
     height: 400px;
@@ -214,7 +231,6 @@ textarea{
 }
 
 .btn-footer:hover{
-
     transition : 1000ms;
     padding: 10px 60px;
     transform : translateY(-0px);
@@ -225,7 +241,7 @@ textarea{
 
 
 
-.container-footer-2  {
+.container-footer-2 {
     padding-bottom: 10px;
     justify-items: center;
     text-align: center;
@@ -246,12 +262,10 @@ textarea{
 }
 
 
-
-.container-footer-3{
-    
+.container-footer-3 {
     display: flex;
     background-color: black;
-    color:White;
+    color: White;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -261,9 +275,10 @@ textarea{
     
 }
 
-.telefono{
+.telefono {
     margin-top: 40px;
 }
+
 
 
 /* redes contacto */
@@ -282,11 +297,39 @@ textarea{
 }
 
 #redes ul li a:hover {
-    transform: scale(1.6);   
-    margin-left: 5px; 
+    transform: scale(1.6);
+    margin-left: 5px;
     margin-right: 5px;
 }
-#quinesSomos p{
+
+/* quines somos styles */
+#quienesSomosCard {
+    height: 500px;
+    padding: 1.5rem;
+}
+#quienesSomosCard .front,
+.back {
+    backface-visibility: hidden;
+    width: 320px;
+    position: absolute;
+    transition: transform 0.5s;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+#quienesSomosCard:hover .front {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    display: inline-block;
+}
+
+#quienesSomosCard:hover .back {
+    transform: rotateY(0deg);
+}
+
+#quinesSomos p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 

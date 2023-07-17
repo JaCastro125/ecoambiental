@@ -8,14 +8,12 @@ body {
 }
 /* colors */
 :root {
-    --color-name: #000;
-    --color-name1: #fff;
+    --color-1: 133, 193, 106;
+    --color-2: 36, 181, 58;
+    --color-3: 	81, 204, 161;
+    --color-4: 	57, 182, 204;
+    --color-5: 	21, 115, 198;
 }
-/* 
-    body{
-        background: var(--color-name);
-    }
-*/
 
 /* boton flotante */
 .a-wsp {
@@ -50,13 +48,17 @@ body {
 /* NavBar */
 nav {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    border-top: solid 3px #25d366;
-    position: fixed !important;
+    /* position: fixed !important; */
     width: 100%;
     color: white;
     backdrop-filter: blur(8px);
+    background-color: rgba(var(--color-1), 0.2);
 }
-
+.navbar-brand>img{
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    padding: 0.5rem;
+}
 .nav-item {
     padding: 0.2rem;
     margin: 0 0.2rem;
@@ -80,7 +82,7 @@ nav {
     border-radius: 1rem;
     transform: scale(1, 0);
     transition: transform 1s;
-    background-color: #25d366;
+    background-color: rgba(var(--color-2));
     z-index: 99;
 }
 
@@ -92,7 +94,7 @@ nav {
 header {
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     max-width: 95%;
 }
 .card-head {
@@ -130,7 +132,7 @@ header {
     position: absolute;
     width: 100%;
     text-align: center;
-    background-color: #39B6CC;
+    background-color: rgb(var(--color-4));
     justify-self: center;
     top: 50%;
     color: #fff;
@@ -146,8 +148,9 @@ header {
 }
 .card-head:hover .oculto{
     opacity: 100;
-    transition: 2s;
+    transition: 1.5s;
     backdrop-filter: blur(4px);
+    background-color: #00000089;
 }
 .card-head:hover .title-head{
     opacity: 0;
@@ -158,13 +161,77 @@ header {
     }
 }
 
+/* BOTON A CONTACTO/FOOTER */
+#botonDeContacto{
+    background-color: rgb(var(--color-2));
+    width: 100%;
+}
+
+/* redes contacto */
+
+#redes .redes-phone {
+    width: 150px;
+    text-decoration: none;
+    color: #000;
+}
+
+#redes ul li a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.5s, color 0.5s;
+}
+
+#redes ul li a:hover {
+    transform: scale(1.6);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* QUIENES SOMOS styles */
+#quienesSomosCard {
+    height: 500px;
+    padding: 1.5rem;
+    background-color: rgb(var(--color-3));
+}
+#quienesSomosCard .front,
+.back {
+    backface-visibility: hidden;
+    width: 320px;
+    position: absolute;
+    transition: transform 0.5s;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+#quienesSomosCard:hover .front {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    display: inline-block;
+}
+
+#quienesSomosCard:hover .back {
+    transform: rotateY(0deg);
+}
+#quienesSomos > h2{
+    color: rgb(var(--color-3));
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-style: double;
+}
+#quienesSomos p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 /* CARROUSELL */
+#clientes>h5{
+    color: rgb(var(--color-5), 0.8);
+}
 
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translateX(calc(-250px * 7))
     }
@@ -221,11 +288,8 @@ header {
 
 
 /* footer */
-
-
-
 .container-footer-1 {
-    background-color: #198754;
+    background-color: rgb(var(--color-3));
     width: 100%;
 }
 
@@ -324,68 +388,3 @@ textarea{
 .telefono {
     margin-top: 40px;
 }
-
-
-
-/* redes contacto */
-#botonDeContacto {
-    width: 100%;
-}
-
-#redes .redes-phone {
-    width: 150px;
-    text-decoration: none;
-    color: #000;
-}
-
-#redes ul li a {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transition: transform 0.5s, color 0.5s;
-}
-
-#redes ul li a:hover {
-    transform: scale(1.6);
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-/* quines somos styles */
-#quienesSomosCard {
-    height: 500px;
-    padding: 1.5rem;
-}
-#quienesSomosCard .front,
-.back {
-    backface-visibility: hidden;
-    width: 320px;
-    position: absolute;
-    transition: transform 0.5s;
-}
-
-.back {
-    transform: rotateY(180deg);
-}
-
-#quienesSomosCard:hover .front {
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    display: inline-block;
-}
-
-#quienesSomosCard:hover .back {
-    transform: rotateY(0deg);
-}
-
-#quinesSomos p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-
-
-
-
-
-
-

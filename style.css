@@ -6,6 +6,16 @@
 body {
     overflow-x: hidden;
 }
+/* colors */
+:root {
+    --color-name: #000;
+    --color-name1: #fff;
+}
+/* 
+    body{
+        background: var(--color-name);
+    }
+*/
 
 /* boton flotante */
 .a-wsp {
@@ -318,6 +328,9 @@ textarea{
 
 
 /* redes contacto */
+#botonDeContacto {
+    width: 100%;
+}
 
 #redes .redes-phone {
     width: 150px;

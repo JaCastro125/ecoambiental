@@ -371,7 +371,7 @@ header {
 }
 
 .slide-track {
-    animation: scroll 300s linear infinite;
+    animation: scroll 25s linear infinite alternate-reverse;
     display: flex;
     margin: 0;
     padding: 0;

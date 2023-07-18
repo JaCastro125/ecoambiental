@@ -66,7 +66,7 @@ body {
     border-radius: 100%;
     box-shadow: 1px 2px 8px 0 rgba(14, 255, 42, 0.6);
     cursor: pointer;
-    transition: #25d366 .2s linear;
+    transition: .2s linear;
     filter: brightness(1);
 }
 
@@ -920,7 +920,7 @@ textarea {
     display: block;
     width: 50%;
     margin-top: 2px;
-    box-shadow: (0 1px 1px rgba(black, 0.1));
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.1);
     background: transparent;
     border: 1px solid white;
     font-size: 17px;

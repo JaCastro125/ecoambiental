@@ -23,11 +23,6 @@ body {
     --menu-position: calc((var(--menu-size) * 2) - var(--icon-size)) / -2;
     --offset: 100px;
     --deg: calc(360deg / var(--li));
-    --color-1: 133, 193, 106;
-    --color-2: 36, 181, 58;
-    --color-3: 81, 204, 161;
-    --color-4: 57, 182, 204;
-    --color-5: 21, 115, 198;
 }
 
 
@@ -66,7 +61,7 @@ body {
     border-radius: 100%;
     box-shadow: 1px 2px 8px 0 rgba(14, 255, 42, 0.6);
     cursor: pointer;
-    transition: .2s linear;
+    transition: #25d366 .2s linear;
     filter: brightness(1);
 }
 
@@ -533,10 +528,6 @@ header {
     transition: 0.24s 0.2s;
 }
 
-.CircleMenu:hover {
-    background: #000;
-}
-
 .ulCicleMenu {
     position: absolute;
     top: var(--menu-position);
@@ -549,7 +540,7 @@ header {
     z-index: -5;
     width: 100%;
     text-align: center;
-    background-color: rgb(var(--color-4));
+    /* background-color: rgb(var(--color-4)); */
     justify-self: center;
     top: 50%;
     color: #fff;
@@ -564,12 +555,12 @@ header {
     transition: all 0.5s 0.1s;
 }
 
-.CircleMenu:hover {
+.CircleMenu {
     .ulCicleMenu {
         transition: transform 0.4s 0.08s, z-index 0s 0.5s;
         transform: scale(1);
         z-index: 5;
-
+        
     }
 }
 
@@ -920,7 +911,7 @@ textarea {
     display: block;
     width: 50%;
     margin-top: 2px;
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.1);
+    box-shadow: (0 1px 1px rgba(black, 0.1));
     background: transparent;
     border: 1px solid white;
     font-size: 17px;

@@ -2,6 +2,7 @@
     max-width: 100vw;
     margin: 0;
     padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
@@ -78,7 +79,7 @@ body {
 /* NavBar */
 nav {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    /* position: fixed !important; */
+    position: fixed !important;
     width: 100%;
     color: white;
     backdrop-filter: blur(8px);
@@ -99,7 +100,7 @@ nav {
 
 .nav-link {
     position: relative;
-    z-index: 100;
+    /* z-index: 100; */
     font-weight: bold;
 }
 
@@ -115,29 +116,44 @@ nav {
     transform: scale(1, 0);
     transition: transform 1s;
     background-color: rgba(var(--color-2));
-    z-index: 99;
+    /* z-index: 99; */
 }
 
 .nav-item:hover::after {
     transform: scale(1, 1);
 }
 
+.texto-verde{
+    color: rgb(var(--color-2));
+}
+.texto-negro{
+    color: #000000;
+}
 
 
 
+nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
 
 
 
+nav.scrolled {
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 
+nav.scrolled  .texto-negro{
+    color: #fff;
+}
 
-
-
-
-
-
-
-
+nav.scrolled .nav-item a {
+    color: #ffffff;
+}
 
 
 
@@ -173,7 +189,7 @@ nav {
 header {
     display: flex;
     justify-content: center;
-    /* margin-top: 5rem; */
+    margin-top: 6rem;
     max-width: 95%;
 }
 
@@ -181,7 +197,7 @@ header {
     position: relative;
     height: 80vh;
     width: 25vw;
-    margin-left: 1rem;
+    margin: 1rem;
     transition: width 1s;
     object-fit: cover;
 }
@@ -213,6 +229,7 @@ header {
     background-size: cover;
     object-fit: cover;
     height: 100%;
+    border-radius: 3%;
 }
 
 .title-head {

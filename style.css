@@ -80,10 +80,12 @@ body {
 nav {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     position: fixed !important;
-    width: 100%;
+    width: 100vw;
     color: white;
     backdrop-filter: blur(8px);
     background-color: rgba(var(--color-1), 0.2);
+    z-index: 100;
+    padding: 0 1rem;
 }
 
 .navbar-brand>img {
@@ -93,14 +95,15 @@ nav {
 }
 
 .nav-item {
-    padding: 0.2rem;
     margin: 0 0.2rem;
     position: relative;
+    align-self: center;
+    text-align: center;
 }
 
 .nav-link {
     position: relative;
-    /* z-index: 100; */
+    z-index: 102;
     font-weight: bold;
 }
 
@@ -116,7 +119,6 @@ nav {
     transform: scale(1, 0);
     transition: transform 1s;
     background-color: rgba(var(--color-2));
-    /* z-index: 99; */
 }
 
 .nav-item:hover::after {
@@ -131,6 +133,11 @@ nav {
 }
 
 
+nav.scrolled .texto-negro,
+nav.scrolled .texto-verde {
+    display: none;
+}
+
 
 nav {
     position: fixed !important;
@@ -142,8 +149,10 @@ nav {
 
 
 nav.scrolled {
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+
 }
 
 
@@ -155,6 +164,17 @@ nav.scrolled .nav-item a {
     color: #ffffff;
 }
 
+nav img{
+    height: 90px;
+}
+
+nav.scrolled img{
+    height: 45px;
+}
+
+nav.scrolled .nav-item{
+    padding: 0;
+}
 
 
 

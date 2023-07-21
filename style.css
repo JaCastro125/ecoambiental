@@ -930,14 +930,13 @@ header {
 
 .contact-form {
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 25px;
     margin-bottom: 15px;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 5px;
     font-weight: bolder;
-    width: 100%;
     color: white;
 }
 
@@ -993,7 +992,7 @@ textarea {
     justify-content: center;
     align-items: center;
     background-color: #131313;
-    min-width: 20%;
+    min-width: 35%;
     color: white;
 }
 

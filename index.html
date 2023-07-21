@@ -21,15 +21,19 @@
     <meta property=”og:title” content="Eco Ambiental Control de Plagas" />
     <meta property="og:image" content="img.com.ar" />
     <meta property="og:description" content="Ipsum occaecat velit eiusmod eiusmod exercitation." />
-
+    
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg sticky-top p-2">
+    <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="./img/logo.svg" height="90" alt="logo" />
+                <img src="./img/logo.svg" alt="logo" />
             </a>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <p class="texto-negro">ECO AMBIENTAL</p>
+                <p class="texto-verde">DESINFECCIONES</p>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,9 +49,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#servicios">Servicios</a>
                     </li>
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="#clientes">Nuestros Clientes</a>
-                    </li> -->
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
@@ -59,8 +63,8 @@
         <div class="card-head">
             <div id="img1">
                 <!-- <img class="img-head" src="./img/photos/header-1.jpg" alt="imagen trabajador de Eco Ambiental"> -->
-                <h2 class="title-head">Desinfección</h2>
-                <p class="oculto my-auto">En EcoAmbiental, nos dedicamos a la desinfección de hogares, industrias y
+                <h2 class="title-head">DESINFECCIÓN</h2>
+                <p class="oculto px-4">En EcoAmbiental, nos dedicamos a la desinfección de hogares, industrias y
                     empresas. Nuestros servicios de desinfección están diseñados para eliminar eficazmente gérmenes,
                     bacterias y virus, creando un ambiente limpio y saludable. Con productos y técnicas de vanguardia,
                     nos aseguramos de proporcionar una desinfección completa y confiable, protegiendo así la salud de
@@ -70,8 +74,8 @@
         <div class="card-head ">
             <div id="img2">
                 <!-- <img class="img-head" src="./img/photos/header-2.jpg" alt="imagen plaga"> -->
-                <h2 class="title-head">Fumigación</h2>
-                <p class="oculto">Contamos con servicios de fumigación especializados para combatir plagas indeseables.
+                <h2 class="title-head">FUMIGACIÓN</h2>
+                <p class="oculto px-4">Contamos con servicios de fumigación especializados para combatir plagas indeseables.
                     Nuestro equipo de expertos en fumigación utiliza métodos seguros y efectivos para eliminar insectos
                     que puedan afectar la tranquilidad y la higiene de su hogar o lugar de trabajo. Trabajamos con
                     precisión y cuidado, asegurándonos de abordar los problemas de plagas de manera rápida y eficiente.
@@ -81,8 +85,8 @@
         <div class="card-head">
             <div id="img3">
                 <!-- <img class="img-head" src="./img/photos/header-3.jpg" alt="imagen trabajador de Eco Ambiental"> -->
-                <h2 class="title-head">Control de plagas</h2>
-                <p class="oculto">En EcoAmbiental, ofrecemos servicios integrales de control de plagas para mantener su
+                <h2 class="title-head">CONTROL DE PLAGAS</h2>
+                <p class="oculto px-4">En EcoAmbiental, ofrecemos servicios integrales de control de plagas para mantener su
                     propiedad libre de infestaciones no deseadas. Nuestro equipo altamente capacitado identificará y
                     evaluará la situación, para luego implementar estrategias de control personalizadas. Ya sea que esté
                     lidiando con insectos, roedores u otras plagas, estamos preparados para brindar soluciones duraderas
@@ -294,51 +298,50 @@
             </div>
         </div>
     </main>
-    <footer id="contacto" class="d-flex flex-md-row flex-column flex-lg-row-reverse">
-        <!--Estilo https://www.neoplagas.cl/
-        Links a Sectores de la página || Contacto formulario-->
-        <div class="container-footer-1">
-            <form class="contact-form">
-                <label for="name">Nombre/Empresa</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Mensaje</label>
-                <textarea id="message" name="message" rows="5"></textarea>
-                <button class="btn-footer" type="submit" value="send" role="submit">Enviar</button>
-            </form>
-        </div>
-
-        <div class="container-footer-2">
-            <div class="icons-container">
-                <h3>Contactanos!</h3>
-                <a class="footer-icons" href="https://wa.link/huw2rx" target="_blank"><img
-                        src="./img/footer/whatsapp-footer.png" alt="" width="30" height="30"></a>
-                <a class="footer-icons" href="https://www.instagram.com/controldeplagas.ecoambiental/?hl=es-la"
-                    target="_blank"><img src="./img/footer/instagram-footer.png" alt="" width="35" height="35"></a>
-                <a class="footer-icons"
-                    href="https://www.facebook.com/people/Eco-Ambiental-Desinfecciones/100085657702852/?paipv=0&eav=AfaEi6GSorZDn5xN8EEM9hHP1NSde_TfXa-nWokDo2X8Hqxf0cCBgsc6Peyqsp_tfng&_rdr"
-                    target="_blank"><img src="./img/footer/facebook-footer.png" alt="" width="30" height="30"></a>
-                <a class="footer-icons" href="mailto:ecoambientaldesinfecciones@gmail.com"><img
-                        src="./img/footer/email-footer.png" alt="" width="30" height="30"></a>
-                <p class="telefono"><img src="./img/footer/telefono-footer.png" alt="" width="40" height="40">Tel.: 0351
-                    386-0091</p>
+    <footer> 
+        <div id="contacto" class="d-flex flex-md-row-reverse flex-column flex-lg-row-reverse">
+                <!--Estilo https://www.neoplagas.cl/
+            Links a Sectores de la página || Contacto formulario-->
+            <div class="container-footer-1">
+                <form class="contact-form">
+                    <h1>Contactanos!</h1>
+                    <label for="name">Nombre/Empresa</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                    <button class="btn-footer" type="submit" value="send" role="submit">Enviar</button>
+                </form>
             </div>
-
-        </div>
-
+            <div class="container-footer-2 d-flex flex-sm-column ">
+                <div class="icons-container">
+                    <a class="footer-icons" href="https://wa.link/huw2rx" target="_blank"><img
+                            src="./img/footer/whatsapp-footer.png" alt="" width="30" height="30"></a>
+                    <a class="footer-icons" href="https://www.instagram.com/controldeplagas.ecoambiental/?hl=es-la"
+                        target="_blank"><img src="./img/footer/instagram-footer.png" alt="" width="35" height="35"></a>
+                    <a class="footer-icons"
+                        href="https://www.facebook.com/people/Eco-Ambiental-Desinfecciones/100085657702852/?paipv=0&eav=AfaEi6GSorZDn5xN8EEM9hHP1NSde_TfXa-nWokDo2X8Hqxf0cCBgsc6Peyqsp_tfng&_rdr"
+                        target="_blank"><img src="./img/footer/facebook-footer.png" alt="" width="30" height="30"></a>
+                    <a class="footer-icons" href="mailto:ecoambientaldesinfecciones@gmail.com"><img
+                            src="./img/footer/email-footer.png" alt="" width="30" height="30"></a>
+                    <p class="telefono"><img src="./img/footer/telefono-footer.png" alt="" width="40" height="40">Tel.: 0351
+                        386-0091</p>
+                </div>
+            </div>
+        </div>    
         <!--Estilo https://www.neoplagas.cl/
             Links a Sectores de la página || Contacto formulario-->
     </footer>
     <div class="container-footer-3">
         <p>Sitio web diseñado y desarrollado por ADN Web Solutions</p>
     </div>
-    </footer>
+        
+
     <script src="./index.js"></script>
     <!--Bootstrap css-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
 </body>
-
 </html>

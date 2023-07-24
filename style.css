@@ -428,13 +428,16 @@ header {
 .quienesSomosCard .front,
 .back {
     backface-visibility: hidden;
-    width: 320px;
     position: absolute;
     transition: transform 0.5s;
 }
 
 .back {
     transform: rotateY(180deg);
+    padding: 1rem;
+}
+.back p{
+    width: 100%;
 }
 
 .quienesSomosCard:hover .front {
@@ -541,19 +544,56 @@ header {
 
 
 /* circle */
-.circuloControlDePagas ul li{
+.containerCirculoControlDePagas{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.containerCirculoControlDePagas img{
+    width: 100%;
+    height: auto;
+}
+.containerCirculoControlDePagas ul{
+    /* display: grid; */
+}
+.containerCirculoControlDePagas ul li{
     list-style-type: none;
 }
-
-.circuloControlDePagas ul li p{
+.containerCirculoControlDePagas ul li p{
+    background: #f3f2f2;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10%;
+    text-align: center;
     display: none;
+    width: 250px;
+    position: absolute;
+
 }
-
-
-
-
-
-
+#liRevision{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 37%;
+}
+#liCapacitacion{
+    position: absolute;
+    z-index: 1;
+}
+#liMonitoreo{
+    position: absolute;
+    z-index: 1;
+}
+#liSeguimiento{
+    position: absolute;
+    z-index: 1;
+}
+#liMantenimiento{
+    position: absolute;
+    z-index: 1;
+}
 
 
 

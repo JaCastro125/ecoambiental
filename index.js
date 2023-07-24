@@ -24,3 +24,13 @@ iconElements.forEach(icon => {
     text.style.display = text.style.display === 'none' ? 'block' : 'none';
   });
 });
+
+const closeButtons = document.querySelectorAll('.btn-close');
+
+closeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const textId = button.parentElement.id.replace('text', 'icon');
+    const icon = document.getElementById(textId);
+    icon.nextElementSibling.style.display = 'none';
+  });
+});

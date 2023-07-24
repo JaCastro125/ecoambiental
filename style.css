@@ -559,6 +559,7 @@ header {
 }
 
 .containerCirculoControlDePagas img {
+    padding: 1rem;
     width: 100%;
     height: auto;
     position: absolute;
@@ -568,14 +569,17 @@ header {
 }
 
 .containerCirculoControlDePagas p {
-    background: #f3f2f2;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10%;
+    background-color: rgb(var(--color-1));
+    color: #fff;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     text-align: center;
     display: none;
-    width: 250px;
+    width: 13rem;
     position: absolute;
+    z-index: 1;
 }
 
 .containerCircleBtn {
@@ -586,18 +590,27 @@ header {
     gap: 5px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "liRevision . . . liSeguimiento"
+        ". liRevision . liSeguimiento ."
         ". . . . ."
         ". . . . ."
         "liCapacitacion . . . liMantenimiento"
         ". . liMonitoreo . .";
 }
-
+.containerCircleBtn i {
+    color: rgb(var(--color-2));
+    text-shadow: 0 0 5px rgb(var(--color-4));
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.containerCircleBtn i:hover{
+    color: rgb(var(--color-5));
+    text-shadow: 0 0 5px rgb(var(--color-3));
+}
 .liRevision {
     grid-area: liRevision;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 .liMonitoreo {
@@ -616,13 +629,22 @@ header {
     grid-area: liSeguimiento;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
 }
 
 .liCapacitacion {
     grid-area: liCapacitacion;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    #textCapacitacion {
+        margin-left: 120px;
+    }
+    #textMantenimiento {
+        margin-right: 120px;
+    }
 }
 
 

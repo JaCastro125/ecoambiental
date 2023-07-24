@@ -2,7 +2,7 @@
     max-width: 100vw;
     margin: 0;
     padding: 0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
@@ -117,10 +117,11 @@ nav {
     transform: scale(1, 1);
 }
 
-.texto-verde{
+.texto-verde {
     color: rgb(var(--color-2));
 }
-.texto-negro{
+
+.texto-negro {
     color: #000000;
 }
 
@@ -148,7 +149,7 @@ nav.scrolled {
 }
 
 
-nav.scrolled  .texto-negro{
+nav.scrolled .texto-negro {
     color: #fff;
 }
 
@@ -156,15 +157,15 @@ nav.scrolled .nav-item a {
     color: #ffffff;
 }
 
-nav img{
+nav img {
     height: 90px;
 }
 
-nav.scrolled img{
+nav.scrolled img {
     height: 45px;
 }
 
-nav.scrolled .nav-item{
+nav.scrolled .nav-item {
     padding: 0;
 }
 
@@ -428,6 +429,7 @@ header {
 .quienesSomosCard .front,
 .back {
     backface-visibility: hidden;
+    /* width: 320px; */
     position: absolute;
     transition: transform 0.5s;
 }
@@ -436,7 +438,8 @@ header {
     transform: rotateY(180deg);
     padding: 1rem;
 }
-.back p{
+
+.back p {
     width: 100%;
 }
 
@@ -544,24 +547,27 @@ header {
 
 
 /* circle */
-.containerCirculoControlDePagas{
+.containerCirculoControlDePagas {
     display: flex;
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+#imgCircucolo {
     position: relative;
 }
-.containerCirculoControlDePagas img{
+
+.containerCirculoControlDePagas img {
     width: 100%;
     height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
-.containerCirculoControlDePagas ul{
-    /* display: grid; */
-}
-.containerCirculoControlDePagas ul li{
-    list-style-type: none;
-}
-.containerCirculoControlDePagas ul li p{
+
+.containerCirculoControlDePagas p {
     background: #f3f2f2;
     margin: 10px;
     padding: 10px;
@@ -570,30 +576,55 @@ header {
     display: none;
     width: 250px;
     position: absolute;
+}
 
+.containerCircleBtn {
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "liRevision . . . liSeguimiento"
+        ". . . . ."
+        ". . . . ."
+        "liCapacitacion . . . liMantenimiento"
+        ". . liMonitoreo . .";
 }
-#liRevision{
-    position: absolute;
-    z-index: 1;
-    top: 10%;
-    left: 37%;
+
+.liRevision {
+    grid-area: liRevision;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#liCapacitacion{
-    position: absolute;
-    z-index: 1;
+
+.liMonitoreo {
+    grid-area: liMonitoreo;
+    display: flex;
+    justify-content: center;
 }
-#liMonitoreo{
-    position: absolute;
-    z-index: 1;
+
+.liMantenimiento {
+    grid-area: liMantenimiento;
+    display: flex;
+    justify-content: center;
 }
-#liSeguimiento{
-    position: absolute;
-    z-index: 1;
+
+.liSeguimiento {
+    grid-area: liSeguimiento;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#liMantenimiento{
-    position: absolute;
-    z-index: 1;
+
+.liCapacitacion {
+    grid-area: liCapacitacion;
+    display: flex;
+    justify-content: center;
 }
+
 
 
 
@@ -965,7 +996,7 @@ textarea {
 
 
 .container-footer-2 {
-    
+
     display: flex;
     justify-content: center;
     align-items: center;

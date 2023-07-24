@@ -421,7 +421,6 @@ header {
 
 /* QUIENES SOMOS styles */
 .quienesSomosCard {
-    height: 500px;
     padding: 1.5rem;
     background-color: rgb(var(--color-3));
 }
@@ -429,7 +428,6 @@ header {
 .quienesSomosCard .front,
 .back {
     backface-visibility: hidden;
-    /* width: 320px; */
     position: absolute;
     transition: transform 0.5s;
 }
@@ -437,10 +435,6 @@ header {
 .back {
     transform: rotateY(180deg);
     padding: 1rem;
-}
-
-.back p {
-    width: 100%;
 }
 
 .quienesSomosCard:hover .front {
@@ -461,6 +455,55 @@ header {
 
 #quienesSomos p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+@media (min-width:227px) and (max-width:405px) {
+    .quienesSomosCard{
+        height: 375px;
+        width: 100%;
+    }
+    .back{
+        width: 100%;
+    }
+}
+@media (min-width:406px) and (max-width:523px) {
+    .quienesSomosCard{
+        min-height: 350px;
+        width: 100%;
+    }
+    .back{
+        width: 100%;
+    }
+}
+@media (min-width:524px) and (max-width:640px) {
+    .quienesSomosCard{
+        min-height: 300px;
+        width: 100%;
+    }
+    .back{
+        width: 100%;
+    }
+}
+@media (min-width:641px) and (max-width:767px) {
+    .quienesSomosCard{
+        min-height: 250px;
+        width: 100%;
+    }
+    .back{
+        width: 100%;
+    }
+}
+@media (max-width:2000px) {
+    .quienesSomosCard{
+        width: 100%;
+    }
+    .back{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 

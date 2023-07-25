@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 body {
@@ -17,23 +19,6 @@ body {
     --color-4: 57, 182, 204;
     --color-5: 21, 115, 198;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -178,26 +163,6 @@ nav.scrolled .nav-item {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* header */
 header {
     display: flex;
@@ -215,14 +180,6 @@ header {
     object-fit: cover;
 }
 
-/* .img-head {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-.img-head:hover {
-    filter: blur(4px);
-} */
 #img1 {
     background-image: url(./img/photos/header-1.jpg);
 }
@@ -258,10 +215,10 @@ header {
 
 .oculto {
     height: 100%;
-    text-align: center;
     color: #fff;
     display: flex;
     align-items: center;
+    padding: 3rem;
     opacity: 0;
     transition: 1s;
 }
@@ -288,141 +245,11 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* BOTON A CONTACTO/FOOTER */
-#botonDeContacto {
-    background-color: rgb(var(--color-2));
-    width: 100%;
-}
-
-/* redes contacto */
-
-#redes .redes-phone {
-    width: 150px;
-    text-decoration: none;
-    color: #000;
-}
-
-#redes ul li a {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transition: transform 0.5s, color 0.5s;
-}
-
-#redes ul li a:hover {
-    transform: scale(1.6);
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* QUIENES SOMOS styles */
 .quienesSomosCard {
     padding: 1.5rem;
     background-color: rgb(var(--color-3));
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .quienesSomosCard .front,
@@ -435,6 +262,7 @@ header {
 .back {
     transform: rotateY(180deg);
     padding: 1rem;
+    font-weight: 200;
 }
 
 .quienesSomosCard:hover .front {
@@ -453,27 +281,36 @@ header {
     border-style: double;
 }
 
-#quienesSomos p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
 
 
 @media (min-width:227px) and (max-width:405px) {
     .quienesSomosCard{
-        height: 375px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        height: 385px;
         width: 100%;
+        font-size: small;
     }
     .back{
         width: 100%;
+        font-size: small;
+    }
+    #servicios, #clientes, #texto-quienes-somos{
+        font-size: small;
     }
 }
 @media (min-width:406px) and (max-width:523px) {
     .quienesSomosCard{
         min-height: 350px;
         width: 100%;
+        font-size: small;
     }
     .back{
         width: 100%;
+        font-size: small;
+    }
+    #servicios, #clientes, #texto-quienes-somos{
+        font-size: small;
     }
 }
 @media (min-width:524px) and (max-width:640px) {
@@ -494,96 +331,19 @@ header {
         width: 100%;
     }
 }
-@media (max-width:2000px) {
+@media (min-width:768px){
     .quienesSomosCard{
         width: 100%;
     }
     .back{
-        text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+    #servicios{
+        max-width: 60vw;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -595,20 +355,6 @@ header {
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-#imgCircucolo {
-    position: relative;
-}
-
-.containerCirculoControlDePagas img {
-    padding: 1rem;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
 }
 
 .containerCirculoControlDePagas p {
@@ -626,24 +372,31 @@ header {
 }
 
 .containerCircleBtn {
-    aspect-ratio: 1/1;
+    background-image: url("./img/circulo-ecoambiental-rehecho-3.png");
+    background-size: cover;
+    aspect-ratio: 4.2/3;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 5px 0px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px 5px;
     grid-auto-flow: row;
     grid-template-areas:
         ". liRevision . liSeguimiento ."
         ". . . . ."
         ". . . . ."
+        ". . . . ."
+        ". . . . ."
+        ". . . . ."
         "liCapacitacion . . . liMantenimiento"
+        ". . . . ."
+        ". . . . ."
         ". . liMonitoreo . .";
 }
 .containerCircleBtn i {
     color: rgb(var(--color-2));
     text-shadow: 0 0 5px rgb(var(--color-4));
     cursor: pointer;
-    font-size: 1.6rem;
+    font-size: 2vw;
 }
 .containerCircleBtn i:hover{
     color: rgb(var(--color-5));
@@ -665,7 +418,8 @@ header {
 .liMantenimiento {
     grid-area: liMantenimiento;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: end;
 }
 
 .liSeguimiento {
@@ -678,7 +432,8 @@ header {
 .liCapacitacion {
     grid-area: liCapacitacion;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: start;
 }
 
 @media (max-width: 768px) {
@@ -697,155 +452,8 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* CARROUSELL */
-#clientes>h5 {
+#clientes{
     color: rgb(var(--color-5), 0.8);
 }
 
@@ -913,89 +521,6 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* footer */
 .container-footer-1 {
     background-color: rgb(var(--color-3));
@@ -1027,6 +552,11 @@ textarea {
     border: 1px solid white;
     font-size: 17px;
     color: white;
+}
+@media (max-width:768px) {
+    input, textarea{
+        width: 80%;
+    }
 }
 
 .btn-footer {
@@ -1061,7 +591,6 @@ textarea {
 
 
 .container-footer-2 {
-
     display: flex;
     justify-content: center;
     align-items: center;

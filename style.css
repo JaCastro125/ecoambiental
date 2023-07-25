@@ -309,7 +309,7 @@ header {
         width: 100%;
         font-size: small;
     }
-    #servicios, #clientes, #texto-quienes-somos{
+    #servicios, #clientes>h5, #texto-quienes-somos{
         font-size: small;
     }
 }
@@ -436,12 +436,28 @@ header {
     justify-content: start;
 }
 
-@media (max-width: 768px) {
-    #textCapacitacion {
+@media (max-width: 767px) {
+    /* #textCapacitacion {
         margin-left: 120px;
     }
     #textMantenimiento {
         margin-right: 120px;
+    } */
+    .liRevision i, 
+    .liMonitoreo i, 
+    .liMantenimiento i, 
+    .liSeguimiento i, 
+    .liCapacitacion i{
+        font-size: 4vw;
+    }
+    .liRevision p,
+    .liMonitoreo p, 
+    .liMantenimiento p,
+    .liSeguimiento p, 
+    .liCapacitacion p{
+        font-size: small;
+        text-align: justify;
+        text-justify: inter-word;
     }
 }
 

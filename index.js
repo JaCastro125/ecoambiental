@@ -21,12 +21,12 @@ iconElements.forEach(icon => {
   icon.addEventListener('mouseover', () => {
     const textId = icon.id.replace('icon', 'text');
     const text = document.getElementById(textId);
-    text.style.visibility = 'visible';
+    text.style.display = 'block';
   });
   icon.addEventListener('mouseout', () => {
     const textId = icon.id.replace('icon', 'text');
     const text = document.getElementById(textId);
-    text.style.visibility = 'hidden';
+    text.style.display = 'none';
   });
 });
 

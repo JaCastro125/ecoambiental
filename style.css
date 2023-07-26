@@ -444,7 +444,7 @@ header {
     .liMantenimiento p,
     .liSeguimiento p, 
     .liCapacitacion p{
-        visibility: hidden;
+        display: none;
     }
 
 @media (max-width: 767px) {

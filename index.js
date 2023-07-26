@@ -18,11 +18,15 @@ window.addEventListener('scroll', () => {
 const iconElements = document.querySelectorAll('.icon');
 
 iconElements.forEach(icon => {
-  icon.addEventListener('mouseover', (event) => {
-    event.preventDefault();
+  icon.addEventListener('mouseover', () => {
     const textId = icon.id.replace('icon', 'text');
     const text = document.getElementById(textId);
-    text.style.display = text.style.display === 'none' ? 'block' : 'none';
+    text.style.visibility = 'visible';
+  });
+  icon.addEventListener('mouseout', () => {
+    const textId = icon.id.replace('icon', 'text');
+    const text = document.getElementById(textId);
+    text.style.visibility = 'hidden';
   });
 });
 

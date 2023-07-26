@@ -62,17 +62,17 @@ nav {
     backdrop-filter: blur(8px);
     background-color: rgba(var(--color-1), 0.2);
     z-index: 100;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
 }
 
 .navbar-brand>img {
     background-color: rgb(255, 255, 255);
     border-radius: 100%;
-    padding: 0.5rem;
+    padding: 0.2rem;
 }
 
 .nav-item {
-    margin: 0 0.2rem;
+    /* margin: 0 0.2rem; */
     position: relative;
     align-self: center;
     text-align: center;
@@ -124,18 +124,10 @@ nav {
     transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
-
-
 nav.scrolled {
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 0;
-
-}
-
-
-nav.scrolled .texto-negro {
-    color: #fff;
 }
 
 nav.scrolled .nav-item a {
@@ -143,18 +135,20 @@ nav.scrolled .nav-item a {
 }
 
 nav img {
-    height: 90px;
-}
-
-nav.scrolled img {
-    height: 45px;
+    height: 3rem;
 }
 
 nav.scrolled .nav-item {
     padding: 0;
 }
 
-
+@media (max-width: 425px){
+    #titulo-navbar{
+        max-width: 246px;
+        justify-content: end !important;
+        display: block !important;
+    }
+}
 
 
 
@@ -167,7 +161,7 @@ nav.scrolled .nav-item {
 header {
     display: flex;
     justify-content: center;
-    margin-top: 6rem;
+    padding-top: 3rem;
     max-width: 95%;
 }
 
@@ -242,6 +236,10 @@ header {
 }
 
 
+#botonDeContacto {	
+    background-color: rgb(var(--color-2));	
+    width: 100%;	
+}
 
 
 
@@ -256,7 +254,7 @@ header {
 .quienesSomosCard .front,
 .back {
     backface-visibility: hidden;
-    position: absolute;
+/*     position: absolute; */
     transition: transform 0.5s;
 }
 
@@ -267,8 +265,8 @@ header {
 }
 
 .quienesSomosCard:hover .front {
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
+    /* transform: rotateY(180deg);
+    backface-visibility: hidden; */
     display: inline-block;
 }
 
@@ -285,64 +283,61 @@ header {
 
 
 @media (min-width:227px) and (max-width:405px) {
-    .quienesSomosCard{
+    /* .quienesSomosCard{
         padding-bottom: 0;
         margin-bottom: 0;
         height: 385px;
         width: 100%;
         font-size: small;
-    }
+    } */
     .back{
         width: 100%;
         font-size: small;
-        transform: none;
     }
     #servicios, #clientes, #texto-quienes-somos{
         font-size: small;
     }
 }
 @media (min-width:406px) and (max-width:523px) {
-    .quienesSomosCard{
+    /* .quienesSomosCard{
         min-height: 350px;
         width: 100%;
         font-size: small;
-    }
+    } */
     .back{
         width: 100%;
         font-size: small;
-        transform: none;
     }
     #servicios, #clientes>h5, #texto-quienes-somos{
         font-size: small;
     }
 }
 @media (min-width:524px) and (max-width:640px) {
-    .quienesSomosCard{
+    /* .quienesSomosCard{
         min-height: 300px;
         width: 100%;
-    }
+    } */
     .back{
         width: 100%;
-        transform: none;
+
     }
     /* .front{
 
     } */
 }
 @media (min-width:641px) and (max-width:767px) {
-    .quienesSomosCard{
+    /*  .quienesSomosCard{
         min-height: 250px;
         width: 100%;
-    }
+    } */
     .back{
         width: 100%;
-        transform: none;
     }
 }
 @media (min-width:768px){
-    .quienesSomosCard{
+    /* .quienesSomosCard{
         width: 100%;
-    }
+    } */
     .back{
         display: flex;
         justify-content: center;
@@ -444,9 +439,13 @@ header {
     justify-content: start;
 }
 
-#servicios-ocultos{
-    display: none;
-}
+.liRevision p,
+    .liMonitoreo p, 
+    .liMantenimiento p,
+    .liSeguimiento p, 
+    .liCapacitacion p{
+        visibility: hidden;
+    }
 
 @media (max-width: 767px) {
     .liRevision i, 
@@ -462,10 +461,6 @@ header {
     .liSeguimiento p, 
     .liCapacitacion p{
         display: none;
-    }
-    #servicios-ocultos{
-        display: block;
-        font-size: smaller;
     }
 }
 .p-servicios-ocultos{

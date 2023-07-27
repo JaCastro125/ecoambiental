@@ -137,6 +137,8 @@ nav.scrolled {
 
 nav.scrolled .nav-item a {
     color: #ffffff;
+    padding: 0.25em 0.25em;
+    margin: 0.25rem 0;
 }
 
 nav img {

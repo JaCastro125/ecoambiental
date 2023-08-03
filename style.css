@@ -186,6 +186,8 @@ header {
     transition: width 1s;
     object-fit: cover;
     background-repeat: no-repeat;
+    border-radius: 3%;
+    box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 #img1 {
@@ -229,6 +231,13 @@ header {
     padding: 3rem;
     opacity: 0;
     transition: 1s;
+    border-radius: 3%;
+}
+
+#img1:hover,
+#img2:hover,
+#img3:hover {
+transform: scale(1.01);
 }
 
 .card-head:hover .oculto {
@@ -262,6 +271,8 @@ header {
     padding: 1.5rem;
     background-color: rgb(var(--color-3));
     font-family: 'Courier New', Courier, monospace;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+
 }
 
 .quienesSomosCard .front,

@@ -85,7 +85,8 @@ nav {
     font-weight: bold;
     padding: 0 0;
 }
-.navbar-toggler{
+
+.navbar-toggler {
     background-color: rgba(255, 255, 255, 0.396);
 }
 
@@ -149,8 +150,8 @@ nav.scrolled .nav-item {
     padding: 0;
 }
 
-@media (max-width: 425px){
-    #titulo-navbar{
+@media (max-width: 425px) {
+    #titulo-navbar {
         max-width: 246px;
         justify-content: end !important;
         display: block !important;
@@ -186,7 +187,7 @@ header {
     transition: width 1s;
     object-fit: cover;
     background-repeat: no-repeat;
-    border-radius: 3%;
+    border-radius: 25px;
     box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -209,7 +210,7 @@ header {
     background-size: cover;
     object-fit: cover;
     height: 100%;
-    border-radius: 3%;
+    border-radius: 25px;
 }
 
 .title-head {
@@ -231,13 +232,15 @@ header {
     padding: 3rem;
     opacity: 0;
     transition: 1s;
-    border-radius: 3%;
+    border-radius: 25px;
 }
 
 #img1:hover,
 #img2:hover,
 #img3:hover {
-transform: scale(1.01);
+    transform: perspective(500px) rotateY(0deg) scale(1.02);
+    transform-origin: center;
+    transition: transform 1.5s;
 }
 
 .card-head:hover .oculto {
@@ -258,9 +261,9 @@ transform: scale(1.01);
 }
 
 
-#botonDeContacto {	
-    background-color: rgb(var(--color-2));	
-    width: 100%;	
+#botonDeContacto {
+    background-color: rgb(var(--color-2));
+    width: 100%;
 }
 
 
@@ -278,7 +281,7 @@ transform: scale(1.01);
 .quienesSomosCard .front,
 .back {
     backface-visibility: hidden;
-/*     position: absolute; */
+    /*     position: absolute; */
     transition: transform 0.5s;
 }
 
@@ -306,12 +309,13 @@ transform: scale(1.01);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-style: double;
 }
-#servicios>.titulo-cute{
+
+#servicios>.titulo-cute {
     color: rgb(var(--color-2));
 }
 
 #uno,
-#dos{
+#dos {
     color: #ffff;
     /* background-color: rgba(var(--color-2), 0.6);
     border: 1px solid #fff;
@@ -319,15 +323,18 @@ transform: scale(1.01);
     padding: 1rem;
     position: absolute;
 }
-#uno{
+
+#uno {
     left: 3%;
 }
-#dos{
+
+#dos {
     right: 3%;
 }
 
 
 @media (min-width:227px) and (max-width:405px) {
+
     /* .quienesSomosCard{
         padding-bottom: 0;
         margin-bottom: 0;
@@ -335,60 +342,76 @@ transform: scale(1.01);
         width: 100%;
         font-size: small;
     } */
-    .back{
+    .back {
         width: 100%;
         font-size: small;
     }
-    #servicios, #clientes, #texto-quienes-somos{
+
+    #servicios,
+    #clientes,
+    #texto-quienes-somos {
         font-size: small;
     }
 }
+
 @media (min-width:406px) and (max-width:523px) {
+
     /* .quienesSomosCard{
         min-height: 350px;
         width: 100%;
         font-size: small;
     } */
-    .back{
+    .back {
         width: 100%;
         font-size: small;
     }
-    #servicios, #clientes>h5, #texto-quienes-somos{
+
+    #servicios,
+    #clientes>h5,
+    #texto-quienes-somos {
         font-size: small;
     }
 }
+
 @media (min-width:524px) and (max-width:640px) {
+
     /* .quienesSomosCard{
         min-height: 300px;
         width: 100%;
     } */
-    .back{
+    .back {
         width: 100%;
 
     }
+
     /* .front{
 
     } */
 }
+
 @media (min-width:641px) and (max-width:767px) {
+
     /*  .quienesSomosCard{
         min-height: 250px;
         width: 100%;
     } */
-    .back{
+    .back {
         width: 100%;
     }
 }
-@media (min-width:768px){
+
+@media (min-width:768px) {
+
     /* .quienesSomosCard{
         width: 100%;
     } */
-    .back{
+    .back {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    #servicios{
+
+    #servicios {
         max-width: 60vw;
     }
 }
@@ -424,7 +447,7 @@ transform: scale(1.01);
     background-size: cover;
     aspect-ratio: 4.2/3;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 5px 5px;
     grid-auto-flow: row;
@@ -440,16 +463,19 @@ transform: scale(1.01);
         ". . . . ."
         ". . liMonitoreo . .";
 }
+
 .containerCircleBtn i {
     color: rgb(var(--color-2));
     text-shadow: 0 0 5px rgb(var(--color-4));
     cursor: pointer;
     font-size: 2vw;
 }
-.containerCircleBtn i:hover{
+
+.containerCircleBtn i:hover {
     color: rgb(var(--color-5));
     text-shadow: 0 0 5px rgb(var(--color-3));
 }
+
 .liRevision {
     grid-area: liRevision;
     display: flex;
@@ -485,33 +511,37 @@ transform: scale(1.01);
 }
 
 .liRevision p,
-    .liMonitoreo p, 
-    .liMantenimiento p,
-    .liSeguimiento p, 
-    .liCapacitacion p{
+.liMonitoreo p,
+.liMantenimiento p,
+.liSeguimiento p,
+.liCapacitacion p {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    .liRevision i,
+    .liMonitoreo i,
+    .liMantenimiento i,
+    .liSeguimiento i,
+    .liCapacitacion i {
         display: none;
     }
 
-@media (max-width: 767px) {
-    .liRevision i, 
-    .liMonitoreo i, 
-    .liMantenimiento i, 
-    .liSeguimiento i, 
-    .liCapacitacion i{
-        display: none;
-    }
     .liRevision p,
-    .liMonitoreo p, 
+    .liMonitoreo p,
     .liMantenimiento p,
-    .liSeguimiento p, 
-    .liCapacitacion p{
+    .liSeguimiento p,
+    .liCapacitacion p {
         display: none;
     }
 }
-.p-servicios-ocultos{
+
+.p-servicios-ocultos {
     font-size: smaller;
 }
-.accordion-button{
+
+.accordion-button {
     color: rgb(var(--color-4)) !important;
 }
 
@@ -521,7 +551,7 @@ transform: scale(1.01);
 
 
 /* CARROUSELL */
-#clientes{
+#clientes {
     color: rgb(var(--color-5), 0.8);
 }
 
@@ -621,8 +651,11 @@ textarea {
     font-size: 17px;
     color: white;
 }
+
 @media (max-width:768px) {
-    input, textarea{
+
+    input,
+    textarea {
         width: 80%;
     }
 }

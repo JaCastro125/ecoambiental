@@ -1,14 +1,31 @@
+@font-face {
+    font-family: ashFont;
+    src: url('./img/DCC-Ash.otf'); 
+}    
+@font-face{
+    font-family: creamCake;
+    src: url('./img/CreamCake.otf');     
+}
+@font-face{
+    font-family: catchye;
+    src: url('./img/Catchye.otf');     
+}
+
 * {
     max-width: 100vw;
     margin: 0;
     padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: catchye;
+    font-weight: bolder;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     text-align: justify;
     text-justify: inter-word;
+    
 }
 
 body {
     overflow-x: hidden;
+    font-size: 1rem;
 }
 
 /* colors */
@@ -20,6 +37,19 @@ body {
     --color-5: 21, 115, 198;
 }
 
+/* FUENTESS */
+.ash{
+    font-family: ashFont;
+}
+.titulo-size3{
+    font-size:3rem;
+}
+.titulo-size2{
+    font-size:2rem;
+}
+.titulo-size15{
+    font-size:1.5rem;
+}
 
 
 
@@ -68,7 +98,8 @@ nav {
 .navbar-brand>img {
     background-color: rgb(255, 255, 255);
     border-radius: 100%;
-    padding: 0.2rem;
+    padding: 0.1rem;
+    height:4rem;
 }
 
 .nav-item {
@@ -150,14 +181,23 @@ nav.scrolled .nav-item {
     padding: 0;
 }
 
-@media (max-width: 425px) {
+@media (min-width:270px) and (max-width:523px) {
     #titulo-navbar {
-        max-width: 246px;
-        justify-content: end !important;
+        max-width: 150px;
+        /* justify-content: end !important; */
         display: block !important;
+        font-size: 1.5rem !important;
+    }
+}
+@media (min-width:523px) and (max-width:767px) {
+    #titulo-navbar {
+        font-size: 1.75rem !important;
     }
 }
 
+#titulo-navbar{
+    font-size: 2.5rem;
+}
 
 
 
@@ -246,7 +286,7 @@ header {
 .card-head:hover .oculto {
     opacity: 100;
     transition: 1.5s;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(0.5px);
     background-color: #00000089;
 }
 
@@ -305,18 +345,18 @@ header {
     width: 90vw;
     margin-top: 0.75rem;
     padding-top: 0.25rem;
-    color: rgb(var(--color-3));
+    background-color: rgb(var(--color-3));
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-style: double;
 }
 
 #servicios>.titulo-cute {
-    color: rgb(var(--color-2));
+    background-color: rgb(var(--color-2));
 }
 
 #uno,
 #dos {
-    color: #ffff;
+    color: black;
     /* background-color: rgba(var(--color-2), 0.6);
     border: 1px solid #fff;
     border-radius: 100%; */

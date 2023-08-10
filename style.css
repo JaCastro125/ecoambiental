@@ -20,7 +20,7 @@
     margin: 0;
     padding: 0;
     font-family: cursiveL;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold !important;
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     text-align: justify;
@@ -30,7 +30,6 @@
 
 body {
     overflow-x: hidden;
-    font-size: 1rem;
 }
 
 /* colors */
@@ -55,6 +54,7 @@ body {
 .titulo-size15{
     font-size:1.5rem;
 }
+
 
 
 
@@ -104,7 +104,7 @@ nav {
     background-color: rgb(255, 255, 255);
     border-radius: 100%;
     padding: 0.1rem;
-    height:4rem;
+    height:3.7rem;
 }
 
 .nav-item {
@@ -193,6 +193,7 @@ nav.scrolled .nav-item {
         display: block !important;
         font-size: 1.5rem !important;
     }
+    
 }
 @media (min-width:523px) and (max-width:767px) {
     #titulo-navbar {
@@ -318,9 +319,7 @@ header {
 .quienesSomosCard {
     padding: 1.5rem;
     background-color: rgb(var(--color-3));
-    font-family: 'Courier New', Courier, monospace;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
-
 }
 
 .quienesSomosCard .front,
@@ -333,7 +332,6 @@ header {
 .back {
     transform: rotateY(180deg);
     padding: 1rem;
-    font-weight: 200;
 }
 
 .quienesSomosCard:hover .front {
@@ -387,7 +385,7 @@ header {
         width: 100%;
         font-size: small;
     } */
-    .back {
+    /* .back {
         width: 100%;
         font-size: small;
     }
@@ -396,7 +394,7 @@ header {
     #clientes,
     #texto-quienes-somos {
         font-size: small;
-    }
+    } */
 }
 
 @media (min-width:406px) and (max-width:523px) {
@@ -408,13 +406,13 @@ header {
     } */
     .back {
         width: 100%;
-        font-size: small;
+        /* font-size: small; */
     }
 
     #servicios,
     #clientes>h5,
     #texto-quienes-somos {
-        font-size: small;
+        /* font-size: small; */
     }
 }
 
@@ -532,6 +530,7 @@ header {
     grid-area: liMonitoreo;
     display: flex;
     justify-content: center;
+    align-self: start;
 }
 
 .liMantenimiento {
@@ -564,7 +563,6 @@ header {
 }
 
 @media (max-width: 767px) {
-
     .liRevision i,
     .liMonitoreo i,
     .liMantenimiento i,

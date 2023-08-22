@@ -756,16 +756,16 @@ textarea {
 
 
 .container-footer-3 {
-    display: flex;
     background-color: black;
-    color: White;
+    color: white;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 30px;
     padding-top: 15px;
     font-size: 13px;
-
+}
+@media (min-width:640px) {
+    .pFooter {
+        width: 100% !important;
+    }
 }
 
 .telefono {
